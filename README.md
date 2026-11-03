@@ -1,3 +1,43 @@
+# English Lab · November 2026
+
+Mobile-first Grammatik-Lernseite für die Lehrerprojektion. Neu erstellte Übungen – keine 1:1-Abschrift der fotografierten Arbeitsblätter.
+
+## Live-Startseite
+
+- `index.html` – neue Startseite, direkt für GitHub Pages
+- `home.css` – responsive Design, grosser Beamer-Schriftregler, Hell/Dunkel
+- `home.js` – 4 Übungen / 38 schrittweise Lösungen, Diagramme und Lehrersteuerung
+- `english-lab-offline.html` – eigenständige HTML-Version ohne externe Abhängigkeiten
+- `accessories.html` – bisherige Lösungen zu den Seiten 41–45 (unverändert im Funktionsumfang)
+
+### Übungen
+
+1. **Prepositions of place:** 8 neu gezeichnete Ball-und-Box-Diagramme mit in, on, under, next to, behind, between, in front of und above.
+2. **Possessives:** 8 Sätze mit my, your, his, her.
+3. **is oder has?:** 8 neue Sätze zum Unterschied von `'s`.
+4. **People & places:** zwei neu entwickelte Kurzprofile, 14 einzelne Lücken.
+
+### Steuerung
+
+- **Nächste Lösung:** exakt eine weitere Lücke wird sichtbar.
+- **Zurück**, **Alle**, **Verbergen:** Lehrkraft kontrolliert jeden Aufdeckschritt.
+- **Marker:** aktivieren und gewünschte Aufgabenkarte anklicken.
+- **Schriftgrösse:** 90–190 %, Beamer und Smartphone.
+- **Vollbild**, **Hell/Dunkel** und Tastatur: Pfeil rechts/links, A = alle, H = verbergen, F = Vollbild, + / − = Schrift.
+- Antworten werden bei jedem neuen Seitenaufruf zunächst verborgen. Schriftgrösse und Farbschema sind lokal speicherbar.
+
+### GitHub Pages
+
+Unter `Settings → Pages → Build and deployment` **Deploy from a branch**, Branch **main**, Ordner **/(root)** wählen. Kein Build und keine GitHub Action erforderlich.
+
+### Rechtehinweis
+
+Die **neue** Startseite nutzt ausschließlich neu gestaltete Aufgaben und eigene SVG-Diagramme, keine Schulbuchscans. Die frühere Accessories-Seite enthält weiterhin aus bereitgestellten Schulbuchseiten ausgeschnittene Abbildungen. Vor öffentlicher Nutzung deren Veröffentlichungsrechte prüfen.
+
+---
+
+## Dokumentation der früheren Accessories-Seite
+
 # Accessories · Classroom Solutions
 
 Interaktive, **mobile-first Lehreransicht** für die fünf fotografierten Englisch-Arbeitsblattseiten **41–45** (Exercises **1–9**). Gedacht für einen Lehrpersonen-Laptop, ein Smartphone oder einen Beamer.
@@ -60,3 +100,4 @@ Einige kleine Bildhinweise sind **aus den vom Nutzer fotografierten Schulbuchsei
 ## GitHub-Variante
 
 Auf `main` ist `index.html` die GitHub-Pages-Startseite. Sie lädt die bearbeitbaren `styles.css`, `data.js`, `assets.js` (eingebettete Illustrationen) und `app.js`. `classroom-standalone.html` ist die vollständig eigenständige Offline-Kopie. Nach Änderungen an den Quelldateien die Offline-Kopie mit `python3 scripts/build_single_file.py` regenerieren. Für GitHub Pages: Settings → Pages → Deploy from a branch → main / (root). Beachte den Abschnitt Bildrechte & Veröffentlichung oben.
+

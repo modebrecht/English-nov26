@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101c2b" />
+  <meta name="description" content="Interaktive Lehreransicht für Englisch Accessories, Arbeitsblätter S. 41–45. Lösungen einzeln einblenden, mobile-first, Beamer-Modus." />
+  <title>Accessories · Classroom Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="data.js" defer></script>
+  
+</head>
+<body data-theme="dark">
+  <div style="padding:12px 18px;text-align:center;background:#d5f3e6;color:#143c40;font:750 14px system-ui,sans-serif"><a href="./" style="color:inherit;text-decoration:none">← Zur neuen English-Lab-Startseite</a></div><div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">A<span>+</span></div>
+        <div class="brand-label"><span class="eyebrow">ENGLISH · ACCESSORIES</span><strong>Classroom Solutions</strong></div>
+      </div>
+      <div class="header-actions">
+        <span class="teacher-tag">LEHRERANSICHT</span>
+        <button type="button" class="icon-button" id="themeButton" title="Hell/Dunkel wechseln" aria-label="Hell/Dunkel wechseln">☀</button>
+        <button type="button" class="icon-button" id="fullscreenButton" title="Vollbild (F)" aria-label="Vollbild">⛶</button>
+      </div>
+    </header>
+
+    <div class="nav-shell">
+      <nav class="page-nav" id="pageNav" aria-label="Seitenwahl"></nav>
+      <nav class="exercise-nav" id="exerciseNav" aria-label="Aufgabenwahl"></nav>
+    </div>
+
+    <aside class="settings-panel" id="settingsPanel" aria-label="Anzeigeeinstellungen">
+      <div class="settings-text"><strong>Anzeige</strong><span>Mobil &amp; Beamer</span></div>
+      <div class="size-controls"><label for="fontScale">Schrift</label><button type="button" class="small-btn" id="smallerButton" aria-label="Schrift kleiner">−</button><input id="fontScale" type="range" min="85" max="190" step="5" value="110" aria-label="Schriftgrösse einstellen" /><button type="button" class="small-btn" id="largerButton" aria-label="Schrift grösser">+</button><output id="fontValue" for="fontScale">110%</output></div>
+      <button type="button" class="settings-button" id="projectorButton">◫ Beamer</button>
+      <button type="button" class="settings-button" id="markerButton" aria-pressed="false">✎ Marker aus</button>
+      <button type="button" class="settings-button" id="resetAllButton" title="Alle Lösungen für eine neue Klasse verbergen">↺ Neustart</button>
+    </aside>
+
+    <main id="main" class="main-area">
+      <section class="lesson-top" aria-labelledby="exerciseTitle">
+        <div class="lesson-meta"><span id="pageTag" class="page-tag">SEITE 41</span><span id="unitTag" class="muted">Jewellery</span></div>
+        <h1 id="exerciseTitle">Exercise 1</h1>
+        <p id="instruction" class="instruction"></p>
+        <div class="status-strip"><span id="progressText" class="progress-text">0 / 6 gelöst</span><div class="track" role="progressbar" id="progressBar" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><div class="track-fill" id="progressFill"></div></div><span id="stateHint" class="state-hint">Lösungen verborgen</span></div>
+      </section>
+      <section class="stage" id="exerciseStage" aria-live="off"></section>
+    </main>
+
+
+
+    <footer class="command-bar" aria-label="Lösungssteuerung">
+      <button type="button" class="command-btn quiet" id="previousButton"><span class="cmd-icon">←</span><span>Zurück</span></button>
+      <button type="button" class="command-btn primary" id="nextButton"><span class="cmd-icon">→</span><span id="nextButtonText">Nächste Lösung</span><kbd>→</kbd></button>
+      <div class="command-more">
+        <button type="button" class="command-btn subtle" id="showAllButton">Alle zeigen</button>
+        <button type="button" class="command-btn subtle" id="hideAllButton">Verbergen</button>
+      </div>
+    </footer>
+    <div class="keyboard-hint">Tasten: <kbd>→</kbd> nächste · <kbd>←</kbd> zurück · <kbd>A</kbd> alle · <kbd>H</kbd> verbergen · <kbd>F</kbd> Vollbild · <kbd>+</kbd>/<kbd>−</kbd> Schrift</div>
+  </div>
+  <div class="sr-only" role="status" aria-live="polite" id="liveStatus"></div>
+<script src="assets.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
